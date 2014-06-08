@@ -31,7 +31,7 @@ public class UserServiceTest extends JerseyTest {
 		defaultClientConfig.getClasses().add(JacksonJsonProvider.class);
 		Client client = Client.create(defaultClientConfig);
 
-		webResource = client.resource("http://localhost:8080/JAXRS-HelloWorld");
+		webResource = client.resource("http://localhost:8080/BarManagement");
 
 		return new WebAppDescriptor.Builder().build();
 	}
@@ -39,25 +39,24 @@ public class UserServiceTest extends JerseyTest {
 	@Test
 	public void testCreateUser() {
 		Employee empl = new Employee("asdf", "sfsd", EmployeeType.Waiter);
-		empl = webResource.path("/rest/users/")
+		empl = webResource.path("/rest/users/users")
 				.type(MediaType.APPLICATION_JSON).post(Employee.class, empl);
 		assertNotNull(empl.getId());
 	}
 
 	@Test
 	public void testGetUserById() {
-		Employee emp = webResource.path("/rest/users/1")
+		Employee emp = webResource.path("/rest/users/users/1")
 				.accept(MediaType.APPLICATION_JSON).get(Employee.class);
 		assertNotNull(emp);
-		ClientResponse response = webResource.path("/rest/users/100").get(
+		ClientResponse response = webResource.path("/rest/users/users/100").get(
 				ClientResponse.class);
 		assertEquals(204, response.getStatus());
 	}
 
 	@Test
 	public void testGetAllUsers() {
-		System.out.println("-------- Testing testGetAllUesrs --------");
-		List<Employee> employees = webResource.path("/rest/users/").accept(MediaType.APPLICATION_JSON)
+		List<Employee> employees = webResource.path("/rest/users/users").accept(MediaType.APPLICATION_JSON)
 				.get(List.class);
 		assertNotNull(employees);
 	}

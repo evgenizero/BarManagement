@@ -31,4 +31,19 @@
     <url-pattern>/rest/consumatives/*</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>order-services</servlet-name>
+    <servlet-class>
+                     com.sun.jersey.spi.container.servlet.ServletContainer
+                </servlet-class>
+    <init-param>
+      <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>order-services</servlet-name>
+    <url-pattern>/rest/orders/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

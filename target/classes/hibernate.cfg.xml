@@ -28,9 +28,10 @@
          
         <property name="hbm2ddl.auto">validate</property>
   
+   		<mapping class="com.fmi.beans.BarOrder"/>
+        <mapping class="com.fmi.beans.OrderNumber"/>
         <mapping class="com.fmi.beans.Employee"/>
         <mapping class="com.fmi.beans.Consumative"/>
-         
           
     </session-factory>
 </hibernate-configuration>
