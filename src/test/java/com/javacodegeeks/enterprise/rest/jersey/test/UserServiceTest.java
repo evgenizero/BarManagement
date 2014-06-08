@@ -10,8 +10,8 @@ import javax.ws.rs.core.MediaType;
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.junit.Test;
 
-import com.javacodegeeks.enterprise.rest.jersey.Employee;
-import com.javacodegeeks.enterprise.rest.jersey.Employee.EmployeeType;
+import com.fmi.beans.Employee;
+import com.fmi.beans.Employee.EmployeeType;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;

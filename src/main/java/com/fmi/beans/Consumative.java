@@ -1,4 +1,4 @@
-package com.javacodegeeks.enterprise.rest.jersey;
+package com.fmi.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

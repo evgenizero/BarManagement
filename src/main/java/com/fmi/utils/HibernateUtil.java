@@ -1,4 +1,4 @@
-package com.javacodegeeks.enterprise.rest.jersey;
+package com.fmi.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;

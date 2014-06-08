@@ -28,8 +28,8 @@
          
         <property name="hbm2ddl.auto">validate</property>
   
-        <mapping class="com.javacodegeeks.enterprise.rest.jersey.Employee"/>
-        <mapping class="com.javacodegeeks.enterprise.rest.jersey.Consumative"/>
+        <mapping class="com.fmi.beans.Employee"/>
+        <mapping class="com.fmi.beans.Consumative"/>
          
           
     </session-factory>

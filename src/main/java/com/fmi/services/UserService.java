@@ -1,4 +1,4 @@
-package com.javacodegeeks.enterprise.rest.jersey;
+package com.fmi.services;
 
 import java.util.List;
 
@@ -15,8 +15,11 @@ import javax.ws.rs.core.Response.Status;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import com.fmi.beans.Employee;
+import com.fmi.utils.HibernateUtil;
+
 @Path("/users")
-public class HelloWorldREST {
+public class UserService {
 
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
